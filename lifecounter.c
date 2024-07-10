@@ -41,7 +41,7 @@ void printPlayerHPTotals(uint8_t* playerHPTotals) {
         // Print spaces to clear previous value
         gprintf("   "); 
         gotogxy(xPos, yPos);
-	    gprintf("%u", playerHPTotals[i]);
+	gprintf("%u", playerHPTotals[i]);
     }
     return;
 }
@@ -61,13 +61,8 @@ void main(void) {
     set_sprite_tile(0, 0); 
     // P1 HP position
     move_sprite(0, 30, 47); 
-    // P2 HP position
-    // move_sprite(0, 111, 47);
-    // P3 HP position
-    // move_sprite(0, 30, 111);
-    // P4 HP position
-    // move_sprite(0, 111, 111); 
-    SHOW_SPRITES; // Show sprites on the screen
+    // Display sprite on screen    
+    SHOW_SPRITES;
 
     while(1) {
         uint8_t input = joypad();
@@ -133,5 +128,4 @@ void main(void) {
             }
         }
     }
-
 }
